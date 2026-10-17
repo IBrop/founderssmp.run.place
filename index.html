@@ -1,10 +1,258 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Test</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111018">
+  <meta name="description" content="Founders SMP — Minecraft-сервер с Create, модами и полу-политическим ролевым миром.">
+  <title>Founders SMP — Создавай историю</title>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    Работает
+<header class="topbar">
+  <div class="nav-wrap">
+    <a class="brand" href="#home" aria-label="Founders SMP — главная">
+      <img src="assets/avatar.jpg" alt="Аватарка Founders SMP">
+      <span>FOUNDERS<small>CREATE · SMP</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Открыть меню">☰ Меню</button>
+    <nav id="nav">
+      <a href="#home" class="active">Главная</a>
+      <a href="#modpack">Сборка</a>
+      <a href="#connect">Как подключиться?</a>
+      <a href="#socials">Соц сети</a>
+      <a href="#rules">Правила</a>
+    </nav>
+  </div>
+</header>
+
+<div id="home" class="hero">
+  <div class="banner">
+    <img src="assets/banner.jpg" alt="Баннер Founders SMP с воздушным кораблём в Minecraft">
+    <div class="hero-copy">
+      <div class="eyebrow">Твой мир. Твои решения. Твоя история.</div>
+      <h1>Founders <span>SMP</span></h1>
+      <p>Модовый Minecraft-сервер с Create, технологиями, дипломатией и борьбой за влияние. Здесь историю мира пишут сами игроки.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#connect">⚒ Как начать играть</a>
+        <a class="btn btn-ghost" href="downloads/Founders-SMP-Pack.zip" download>⬇ Скачать сборку</a>
+      </div>
+    </div>
+  </div>
+  <div class="quick-stats">
+    <div class="stat"><strong>⚙ Create и технологии</strong><span>Механизмы, автоматизация и большие проекты</span></div>
+    <div class="stat"><strong>🏛 Политика и дипломатия</strong><span>Государства, союзы, переговоры и конфликты</span></div>
+    <div class="stat"><strong>🌍 Мир игроков</strong><span>Строй, развивайся и оставь свой след</span></div>
+  </div>
+</div>
+
+<main>
+  <section aria-labelledby="about-title">
+    <div class="section-head">
+      <span class="eyebrow">Добро пожаловать</span>
+      <h2 id="about-title">Не просто выживание</h2>
+      <p>Founders SMP — это место, где инженерия встречается с политикой. Создавай производственные цепочки, развивай поселение, договаривайся с соседями и участвуй в жизни общего мира.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="card-icon">⚙</div><h3>Инженерия с Create</h3><p>Строй фабрики, транспортные системы и сложные механизмы. Автоматизируй рутину и воплощай масштабные идеи.</p></article>
+      <article class="card"><div class="card-icon">🏛</div><h3>Политическая жизнь</h3><p>Объединяй игроков, заключай договоры, развивай экономику и отстаивай интересы своей стороны в рамках правил сервера.</p></article>
+      <article class="card"><div class="card-icon">🧱</div><h3>Свои проекты</h3><p>От уютной базы до промышленного города — выбирай собственный путь и оставляй заметный след в мире.</p></article>
+    </div>
+  </section>
+
+  <section id="modpack" aria-labelledby="modpack-title">
+    <div class="section-head">
+      <span class="eyebrow">Моды и возможности</span>
+      <h2 id="modpack-title">Сборка Founders</h2>
+      <p>Основа приключения — Create и модовый геймплей. Полный список модов, версия Minecraft и загрузчик будут опубликованы здесь, чтобы все игроки использовали совместимую сборку.</p>
+    </div>
+    <div class="feature">
+      <article class="card feature-main">
+        <div class="card-icon">⚙️</div>
+        <h3>Create — строй машины, меняй мир</h3>
+        <p>Передачи, валы, конвейеры и производственные линии дают простор для инженерных решений. Соединяй механизмы с инфраструктурой своего города.</p>
+        <div class="tag-row"><span class="tag">Create</span><span class="tag">Автоматизация</span><span class="tag">Строительство</span><span class="tag">SMP</span></div>
+      </article>
+      <article class="card">
+        <h3>Перед установкой</h3>
+        <ul>
+          <li>Проверь версию Minecraft.</li>
+          <li>Установи нужный загрузчик модов.</li>
+          <li>Скачай сборку только из официальной ссылки проекта.</li>
+          <li>Не смешивай файлы разных версий сборки.</li>
+        </ul>
+        <a class="btn btn-primary download-btn" href="./downloads/Founders-SMP-Pack.zip" download="Founders-SMP-Pack.zip">
+⚒ Скачать сборку
+</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="connect" aria-labelledby="connect-title">
+    <div class="section-head">
+      <span class="eyebrow">Присоединяйся</span>
+      <h2 id="connect-title">Как подключиться?</h2>
+      <p>Скопируй адрес сервера и добавь его в список мультиплеера Minecraft. Для модового сервера сначала установи совместимую сборку.</p>
+    </div>
+    <div class="feature">
+      <article class="card server-card">
+        <h3>IP-адрес сервера</h3>
+        <p>Добавь этот адрес в Minecraft → Сетевая игра → Добавить сервер.</p>
+
+        <div class="server-ip">
+          <code id="serverIp">founderssmp.run.place</code>
+          <button class="copy-btn" id="copyIp">Копировать</button>
+        </div>
+
+        <div class="server-status" aria-label="Информация о сервере">
+          <div>
+            <span class="status-label">Статус сервера</span>
+            <strong id="serverStatus" class="status-checking" aria-live="polite">Проверка...</strong>
+          </div>
+
+          <div>
+            <span class="status-label">Версия</span>
+            <strong>1.21.1</strong>
+          </div>
+
+          <div>
+            <span class="status-label">Загрузчик</span>
+            <strong>NeoForge</strong>
+          </div>
+
+          <div>
+            <span class="status-label">Игроки онлайн</span>
+            <strong id="playerCount" aria-live="polite">— / —</strong>
+          </div>
+        </div>
+        <a class="btn btn-primary server-pack-btn"
+   href="./downloads/Founders-SMP-Pack.zip"
+   download>
+  ⚒ Скачать сборку
+          </a>
+          <div class="server-update-note">
+  Статус и онлайн обновляются автоматически.
+          </div>
+      </article>
+      <article class="card">
+        <div class="steps">
+          <div class="step"><div><h3>Установи нужную версию</h3><p>Сверь версию Minecraft и загрузчик с опубликованной сборкой сервера. NeoForge 1.21.1 21.1.252 и выше.</p></div></div>
+          <div class="step"><div><h3>Установи модпак</h3><p>Скачай сборку по официальной ссылке проекта и запусти игру через нужный профиль. Или же скачать наш лаунчер.</p></div></div>
+          <div class="step"><div><h3>Добавь сервер</h3><p>Открой «Сетевая игра», нажми «Добавить сервер» и вставь IP.</p></div></div>
+          <div class="step"><div><h3>Залетай в мир</h3><p>Ознакомься с правилами и уважай других участников сообщества.</p></div></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="socials" aria-labelledby="socials-title">
+    <div class="section-head">
+      <span class="eyebrow">Будь на связи</span>
+      <h2 id="socials-title">Соц сети и сообщество</h2>
+      <p>Следи за обновлениями, объявлениями, набором игроков и новостями политической жизни сервера.</p>
+    </div>
+    <div class="socials">
+      <a class="social-card" href="https://discord.gg/grRrgvFmva" target="_blank" rel="noopener noreferrer"><div class="card-icon">◉</div><div><h3>Discord</h3><p>Чат, объявления и поиск союзников</p></div><span class="arrow">↗</span></a>
+      <a class="social-card" href="https://t.me/Founderssmp" target="_blank" rel="noopener noreferrer"><div class="card-icon">➤</div><div><h3>Telegram</h3><p>Новости и важные сообщения</p></div><span class="arrow">↗</span></a>
+      <a class="social-card" href="https://discord.gg/grRrgvFmva" target="_blank" rel="noopener noreferrer"><div class="card-icon">✦</div><div><h3>Сообщество</h3><p>Медиа, скриншоты и события сервера</p></div><span class="arrow">↗</span></a>
+    </div>
+  </section>
+
+  <section id="rules" aria-labelledby="rules-title">
+    <div class="section-head">
+      <span class="eyebrow">Общее пространство</span>
+      <h2 id="rules-title">Правила сервера</h2>
+      <p>Политика, конкуренция и конфликты — часть игрового процесса. Главное, чтобы всем было интересно играть.</p>
+    </div>
+    <div class="rules">
+      <div class="rule"><b>01</b><p><strong>Уважай игроков.</strong> Запрещены травля, оскорбления и преследование вне игрового отыгрыша.</p></div>
+      <div class="rule"><b>02</b><p><strong>Без читов и эксплойтов.</strong> Не используй сторонние преимущества и уязвимости для обхода правил.</p></div>
+      <div class="rule"><b>03</b><p><strong>Гриферство — только по правилам.</strong> Не разрушай чужие постройки и не забирай вещи без разрешённых механик или согласованного игрового конфликта.</p></div>
+      <div class="rule"><b>04</b><p><strong>Политика — в рамках игры.</strong> Договоры, союзы и конфликты не должны превращаться в реальные угрозы или травлю.</p></div>
+      <div class="rule"><b>05</b><p><strong>Не мешай работе сервера.</strong> Не создавай намеренно лаги и не злоупотребляй механизмами или фермами.</p></div>
+      <div class="rule"><b>06</b><p><strong>Следуй решениям администрации.</strong> Спорные ситуации решаются через обращение к модераторам, а не травлю в чате.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <strong>FOUNDERS SMP</strong> · Создавай историю, а не просто базу.<br>
+  <span>Неофициальный сайт сообщества Minecraft. Minecraft — игра Mojang Studios.</span>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite">IP скопирован!</div>
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false');
+    nav.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+    link.classList.add('active');
+  }));
+  const toast = document.getElementById('toast');
+  let toastTimer;
+  function showToast(message) {
+    toast.textContent = message; toast.classList.add('show');
+    clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove('show'), 2100);
+  }
+  document.getElementById('copyIp').addEventListener('click', async () => {
+    const ip = document.getElementById('serverIp').textContent.trim();
+    try {
+      await navigator.clipboard.writeText(ip);
+      showToast('IP скопирован: ' + ip);
+    } catch (e) {
+      const field = document.createElement('textarea'); field.value = ip;
+      field.style.position = 'fixed'; field.style.opacity = '0'; document.body.appendChild(field);
+      field.select();
+      try { document.execCommand('copy'); showToast('IP скопирован: ' + ip); }
+      catch (_) { showToast('IP сервера: ' + ip); }
+      field.remove();
+    }
+  });
+  // Автоматический статус Minecraft-сервера и количество игроков
+  const minecraftServer = document.getElementById('serverIp').textContent.trim();
+  const serverStatus = document.getElementById('serverStatus');
+  const playerCount = document.getElementById('playerCount');
+
+  function setServerState(state, text) {
+    serverStatus.classList.remove('status-online', 'status-offline', 'status-checking');
+    serverStatus.classList.add(state);
+    serverStatus.textContent = text;
+  }
+
+  async function updateServerStatus() {
+    try {
+      const response = await fetch(
+        `https://api.mcstatus.io/v2/status/java/${encodeURIComponent(minecraftServer)}?query=false`,
+        { cache: 'no-store' }
+      );
+
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+      const data = await response.json();
+
+      if (data.online) {
+        setServerState('status-online', 'Онлайн');
+        const online = data.players?.online ?? 0;
+        const max = data.players?.max ?? '—';
+        playerCount.textContent = `${online} / ${max}`;
+      } else {
+        setServerState('status-offline', 'Оффлайн');
+        playerCount.textContent = '0 / —';
+      }
+    } catch (error) {
+      setServerState('status-offline', 'Неизвестно');
+      playerCount.textContent = '— / —';
+      console.error('Не удалось получить статус сервера:', error);
+    }
+  }
+
+  updateServerStatus();
+  setInterval(updateServerStatus, 1000);
+</script>
 </body>
 </html>
