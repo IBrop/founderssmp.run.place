@@ -1,0 +1,865 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Политика конфиденциальности Founders Launcher. Информация об обработке персональных данных и авторизации через Discord.">
+  <title>Политика конфиденциальности — Founders Launcher</title>
+
+  <style>
+    :root {
+      --bg: #090e0c;
+      --surface: #111a16;
+      --surface-2: #16221b;
+      --border: #26392e;
+      --text: #edf6ef;
+      --muted: #9aac9f;
+      --green: #4ce18a;
+      --green-dark: #183e29;
+      --max-width: 920px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    a {
+      color: var(--green);
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(9, 14, 12, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      max-width: 1150px;
+      margin: auto;
+      padding: 15px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 17px;
+      color: white;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      background: var(--green-dark);
+      color: var(--green);
+      border: 1px solid #376f4b;
+      border-radius: 10px;
+      font-size: 19px;
+    }
+
+    .alpha {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: var(--green);
+      border: 1px solid #376f4b;
+      padding: 3px 7px;
+      border-radius: 5px;
+    }
+
+    .back {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .container {
+      max-width: var(--max-width);
+      padding: 0 24px 80px;
+      margin: auto;
+    }
+
+    .hero {
+      padding: 75px 0 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 16px 0;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.2;
+      letter-spacing: -1.3px;
+    }
+
+    .lead {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .metadata {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .metadata span {
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .notice {
+      margin: 32px 0;
+      padding: 20px 22px;
+      background: #12261a;
+      border-left: 3px solid var(--green);
+      border-radius: 10px;
+      color: #c9e8d1;
+      font-size: 14px;
+    }
+
+    .toc {
+      margin: 32px 0 45px;
+      padding: 25px 30px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+    }
+
+    .toc h2 {
+      margin: 0 0 16px;
+      font-size: 19px;
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 23px;
+    }
+
+    .toc li {
+      margin: 5px 0;
+    }
+
+    section {
+      padding: 22px 0;
+      scroll-margin-top: 90px;
+    }
+
+    section + section {
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 23px;
+      line-height: 1.4;
+    }
+
+    h3 {
+      margin-top: 25px;
+      font-size: 17px;
+    }
+
+    p, li {
+      color: #c2d0c5;
+      font-size: 14px;
+    }
+
+    ul {
+      padding-left: 23px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text);
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0;
+      font-size: 13px;
+    }
+
+    .data-table th,
+    .data-table td {
+      text-align: left;
+      padding: 14px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .data-table th {
+      background: var(--surface-2);
+      color: var(--green);
+    }
+
+    .data-table td {
+      color: #c2d0c5;
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding: 30px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-brand {
+      font-weight: 800;
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .footer small {
+      display: block;
+      margin-top: 10px;
+    }
+
+    ::selection {
+      background: #245d3b;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .topbar-inner {
+        padding: 12px 16px;
+      }
+
+      .brand {
+        font-size: 14px;
+      }
+
+      .container {
+        padding: 0 18px 50px;
+      }
+
+      .hero {
+        padding: 45px 0 32px;
+      }
+
+      .toc {
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span>Founders Launcher</span>
+      <span class="alpha">ALPHA</span>
+    </div>
+
+    <a class="back" href="/">
+      На главную
+    </a>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="hero">
+    <div class="eyebrow">
+      Founders SMP · Legal Center
+    </div>
+
+    <h1>Политика<br>конфиденциальности</h1>
+
+    <p class="lead">
+      Мы стремимся сделать использование Founders Launcher
+      удобным, прозрачным и безопасным. В этом документе
+      объясняется, какие данные обрабатываются при работе
+      лаунчера, для чего они нужны и как пользователь может
+      управлять ими.
+    </p>
+
+    <div class="metadata">
+      <span>Продукт: Founders Launcher</span>
+      <span>Версия документа: 1.0</span>
+      <span>Дата вступления в силу: 09.11.2026</span>
+    </div>
+  </div>
+
+  <div class="notice">
+    <strong>Кратко о главном</strong>
+    <p>
+      Founders Launcher использует Discord OAuth2 для
+      идентификации пользователя. Авторизация происходит
+      через Discord, поэтому вводить пароль Discord
+      непосредственно в лаунчер не требуется.
+    </p>
+    <p>
+      Мы стремимся обрабатывать только те сведения,
+      которые необходимы для авторизации, сохранения
+      аккаунта, безопасности и работы сервиса.
+    </p>
+  </div>
+
+  <nav class="toc" aria-label="Содержание">
+    <h2>Содержание</h2>
+    <ol>
+      <li><a href="#general">Общие положения</a></li>
+      <li><a href="#operator">Оператор данных</a></li>
+      <li><a href="#data">Какие данные обрабатываются</a></li>
+      <li><a href="#discord">Авторизация через Discord</a></li>
+      <li><a href="#purposes">Цели и правовые основания</a></li>
+      <li><a href="#storage">Хранение данных</a></li>
+      <li><a href="#security">Безопасность</a></li>
+      <li><a href="#sharing">Передача данных</a></li>
+      <li><a href="#retention">Сроки хранения</a></li>
+      <li><a href="#rights">Права пользователя</a></li>
+      <li><a href="#deletion">Удаление данных</a></li>
+      <li><a href="#children">Несовершеннолетние</a></li>
+      <li><a href="#updates">Изменения политики</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ol>
+  </nav>
+
+  <section id="general">
+    <h2>1. Общие положения</h2>
+
+    <p>
+      Настоящая Политика конфиденциальности описывает
+      обработку персональных данных пользователей
+      программного обеспечения Founders Launcher,
+      связанного с проектом Founders SMP.
+    </p>
+
+    <p>
+      Политика распространяется на обработку данных
+      при авторизации, использовании приложения,
+      взаимодействии с серверной инфраструктурой
+      и обращении в поддержку.
+    </p>
+
+    <p>
+      Сторонние сервисы, включая Discord, могут
+      обрабатывать данные согласно собственным
+      правилам конфиденциальности.
+    </p>
+  </section>
+
+  <section id="operator">
+    <h2>2. Оператор персональных данных</h2>
+
+    <p>
+      Ответственным за обработку персональных данных
+      в рамках Founders Launcher является:
+    </p>
+
+    <p>
+      <strong>IBrop</strong>
+    </p>
+
+    <p>
+      Контакт для вопросов конфиденциальности:
+      <strong>step.shch.es07@gmail.com</strong>
+    </p>
+
+    <p>
+      Дополнительные сведения об операторе и его
+      местонахождении предоставляются в объёме,
+      предусмотренном применимым законодательством.
+    </p>
+  </section>
+
+  <section id="data">
+    <h2>3. Какие данные мы обрабатываем</h2>
+
+    <p>
+      В зависимости от используемых функций Founders
+      Launcher могут обрабатываться следующие категории
+      данных.
+    </p>
+
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Категория</th>
+            <th>Данные</th>
+            <th>Назначение</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Discord ID</td>
+            <td>Уникальный идентификатор аккаунта</td>
+            <td>Идентификация пользователя</td>
+          </tr>
+
+          <tr>
+            <td>Discord Username</td>
+            <td>Имя пользователя Discord</td>
+            <td>Отображение аккаунта</td>
+          </tr>
+
+          <tr>
+            <td>Global Name</td>
+            <td>Отображаемое имя Discord</td>
+            <td>Персонализация интерфейса</td>
+          </tr>
+
+          <tr>
+            <td>Аватар</td>
+            <td>Идентификатор изображения профиля</td>
+            <td>Отображение профиля</td>
+          </tr>
+
+          <tr>
+            <td>Данные авторизации</td>
+            <td>Сведения о сессии и необходимые OAuth-токены</td>
+            <td>Поддержание авторизованного входа</td>
+          </tr>
+
+          <tr>
+            <td>Сведения о членстве</td>
+            <td>Статус участия в Discord-сервере проекта</td>
+            <td>Проверка условий доступа</td>
+          </tr>
+
+          <tr>
+            <td>Технические данные</td>
+            <td>Сведения о запросах, ошибках и безопасности</td>
+            <td>Защита и диагностика сервиса</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Если пользователь предоставляет дополнительные
+      сведения при обращении в поддержку, они могут
+      обрабатываться для рассмотрения обращения.
+    </p>
+
+    <p>
+      Адрес электронной почты Discord может
+      обрабатываться, если он предоставлен в рамках
+      запрошенных разрешений OAuth и используется
+      серверной частью приложения.
+    </p>
+  </section>
+
+  <section id="discord">
+    <h2>4. Авторизация через Discord</h2>
+
+    <p>
+      Founders Launcher использует протокол OAuth2,
+      предоставляемый Discord.
+    </p>
+
+    <p>
+      При авторизации пользователь перенаправляется
+      в интерфейс Discord для подтверждения
+      необходимых разрешений.
+    </p>
+
+    <p>
+      После успешной авторизации серверная часть
+      Founders Launcher может получить разрешённые
+      данные профиля через Discord API.
+    </p>
+
+    <p>
+      <strong>Пароль Discord не требуется вводить
+      непосредственно в Founders Launcher.</strong>
+    </p>
+
+    <p>
+      Пользователь может управлять разрешениями
+      подключённых приложений в настройках
+      своего аккаунта Discord.
+    </p>
+
+    <p>
+      Политика конфиденциальности Discord:
+      <a href="https://discord.com/privacy"
+         target="_blank"
+         rel="noopener noreferrer">
+        discord.com/privacy
+      </a>
+    </p>
+  </section>
+
+  <section id="purposes">
+    <h2>5. Цели и правовые основания обработки</h2>
+
+    <p>
+      Персональные данные могут использоваться для:
+    </p>
+
+    <ul>
+      <li>Авторизации и идентификации пользователя.</li>
+      <li>Сохранения и восстановления аккаунта.</li>
+      <li>Отображения имени и данных профиля.</li>
+      <li>Проверки разрешений на доступ.</li>
+      <li>Предотвращения несанкционированного доступа.</li>
+      <li>Поддержания стабильности и безопасности сервиса.</li>
+      <li>Обработки обращений пользователей.</li>
+      <li>Соблюдения применимых юридических обязательств.</li>
+    </ul>
+
+    <p>
+      В зависимости от конкретной операции правовым
+      основанием обработки может выступать необходимость
+      исполнения соглашения с пользователем, выполнение
+      юридических обязанностей, законный интерес
+      оператора или согласие пользователя, когда
+      оно необходимо.
+    </p>
+
+    <p>
+      Пользователь может запросить информацию о
+      правовом основании конкретной операции обработки.
+    </p>
+  </section>
+
+  <section id="storage">
+    <h2>6. Хранение данных</h2>
+
+    <p>
+      Данные аккаунта могут храниться в серверной
+      инфраструктуре Founders Launcher, а также
+      локально на устройстве пользователя для
+      восстановления состояния приложения.
+    </p>
+
+    <p>
+      К локально сохраняемым сведениям могут относиться
+      идентификатор Discord, имя пользователя,
+      отображаемое имя и сведения об активном аккаунте.
+    </p>
+
+    <p>
+      Данные авторизации должны обрабатываться с
+      использованием мер защиты, соответствующих
+      их чувствительности.
+    </p>
+
+    <p>
+      Точные места хранения, поставщики инфраструктуры
+      и страны обработки должны соответствовать
+      фактической конфигурации сервиса.
+    </p>
+  </section>
+
+  <section id="security">
+    <h2>7. Безопасность данных</h2>
+
+    <p>
+      При обработке персональных данных применяются
+      технические и организационные меры, направленные
+      на предотвращение несанкционированного доступа,
+      утраты, изменения или раскрытия информации.
+    </p>
+
+    <p>
+      Такие меры могут включать:
+    </p>
+
+    <ul>
+      <li>Использование защищённых HTTPS-соединений.</li>
+      <li>Контроль доступа к серверным компонентам.</li>
+      <li>Ограничение доступа к служебным данным.</li>
+      <li>Защиту OAuth-токенов и конфиденциальных ключей.</li>
+      <li>Проверку авторизованных сессий.</li>
+      <li>Обработку ошибок без раскрытия секретных данных.</li>
+    </ul>
+
+    <p>
+      Несмотря на принимаемые меры, абсолютная
+      безопасность передачи и хранения информации
+      не может быть гарантирована.
+    </p>
+  </section>
+
+  <section id="sharing">
+    <h2>8. Передача данных третьим лицам</h2>
+
+    <p>
+      Для функционирования Founders Launcher могут
+      использоваться сторонние технические сервисы,
+      включая Discord и поставщиков серверной
+      инфраструктуры.
+    </p>
+
+    <p>
+      Данные могут передаваться таким поставщикам
+      в объёме, необходимом для предоставления
+      соответствующих услуг.
+    </p>
+
+    <p>
+      Данные также могут раскрываться при наличии
+      действительного юридического обязательства.
+    </p>
+
+    <p>
+      Международная передача персональных данных,
+      если она осуществляется, должна сопровождаться
+      предусмотренными законодательством гарантиями.
+    </p>
+  </section>
+
+  <section id="retention">
+    <h2>9. Сроки хранения</h2>
+
+    <p>
+      Данные аккаунта хранятся не дольше, чем это
+      необходимо для целей их обработки, с учётом
+      действующих юридических обязательств.
+    </p>
+
+    <p>
+      Срок хранения отдельных категорий данных
+      может зависеть от активности аккаунта,
+      состояния сессии, необходимости обеспечения
+      безопасности и установленных законом сроков.
+    </p>
+
+    <p>
+      По достижении цели обработки данные удаляются
+      или обезличиваются, если дальнейшее хранение
+      не требуется по законным основаниям.
+    </p>
+  </section>
+
+  <section id="rights">
+    <h2>10. Права пользователя</h2>
+
+    <p>
+      В пределах применимого законодательства
+      пользователь может иметь право:
+    </p>
+
+    <ul>
+      <li>Получить информацию об обработке своих данных.</li>
+      <li>Запросить доступ к персональным данным.</li>
+      <li>Потребовать исправления неточных сведений.</li>
+      <li>Запросить удаление данных.</li>
+      <li>Потребовать ограничения обработки.</li>
+      <li>Возразить против определённых видов обработки.</li>
+      <li>Получить данные в переносимом формате, если применимо.</li>
+      <li>Отозвать согласие, когда обработка основана на согласии.</li>
+      <li>Обратиться в компетентный надзорный орган.</li>
+    </ul>
+
+    <p>
+      Отзыв согласия не влияет на законность обработки,
+      выполненной до его отзыва.
+    </p>
+  </section>
+
+  <section id="deletion">
+    <h2>11. Удаление данных</h2>
+
+    <p>
+      Пользователь может запросить удаление
+      персональных данных, связанных с его аккаунтом
+      Founders Launcher.
+    </p>
+
+    <p>
+      Для подачи запроса необходимо обратиться
+      по контактному адресу, указанному в разделе
+      «Контакты».
+    </p>
+
+    <p>
+      Перед выполнением запроса может потребоваться
+      проверка принадлежности аккаунта заявителю.
+      Для такой проверки не требуется сообщать
+      пароль Discord.
+    </p>
+
+    <p>
+      Запрос рассматривается в сроки, предусмотренные
+      применимым законодательством.
+    </p>
+
+    <p>
+      Некоторые сведения могут сохраняться после
+      удаления аккаунта, если это необходимо для
+      исполнения юридических обязательств или
+      защиты законных прав.
+    </p>
+
+    <p>
+      Удаление данных Founders Launcher само по себе
+      не приводит к удалению аккаунта Discord.
+    </p>
+  </section>
+
+  <section id="children">
+    <h2>12. Несовершеннолетние пользователи</h2>
+
+    <p>
+      Использование Founders Launcher предполагает
+      соблюдение возрастных требований Discord
+      и применимого законодательства.
+    </p>
+
+    <p>
+      Если для обработки данных несовершеннолетнего
+      пользователя необходимо согласие законного
+      представителя, такое согласие должно быть
+      получено в предусмотренных законом случаях.
+    </p>
+  </section>
+
+  <section id="updates">
+    <h2>13. Изменения политики</h2>
+
+    <p>
+      Настоящая Политика может периодически
+      обновляться в связи с изменением функциональности
+      Founders Launcher, технологий обработки данных
+      или применимых юридических требований.
+    </p>
+
+    <p>
+      Актуальная версия документа публикуется
+      по адресу:
+    </p>
+
+    <p>
+      <a href="https://www.founders-smp.ru/launcher/policy">
+        https://www.founders-smp.ru/launcher/policy
+      </a>
+    </p>
+
+    <p>
+      Дата вступления новой редакции в силу
+      указывается в начале документа.
+    </p>
+
+    <p>
+      При существенных изменениях пользователи
+      уведомляются способом, соответствующим
+      характеру изменений и требованиям закона.
+    </p>
+  </section>
+
+  <section id="contacts">
+    <h2>14. Контакты</h2>
+
+    <p>
+      По вопросам конфиденциальности, доступа,
+      исправления или удаления персональных данных
+      можно обратиться к оператору проекта.
+    </p>
+
+    <p>
+      <strong>Проект:</strong> Founders SMP<br>
+      <strong>Продукт:</strong> Founders Launcher<br>
+      <strong>Сайт:</strong>
+      <a href="https://www.founders-smp.ru/">
+        www.founders-smp.ru
+      </a><br>
+      <strong>Email для обращений:</strong>
+      step.shch.es07@gmail.com
+    </p>
+
+    <p>
+      При обращении рекомендуется указать тему запроса
+      и Discord ID, если он известен. Не отправляйте
+      пароли, OAuth-токены и другие секретные данные.
+    </p>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      Founders Launcher
+    </div>
+
+    <small>
+      Founders SMP · Политика конфиденциальности
+    </small>
+
+    <small>
+      Версия 1.0 · © <span id="year"></span> Founders SMP
+    </small>
+
+    <small>
+      Создано для прозрачной и безопасной работы
+      Founders Launcher.
+    </small>
+  </footer>
+
+</main>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
